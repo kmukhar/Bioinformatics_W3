@@ -1,8 +1,7 @@
 package com.mukhar;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -10,7 +9,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.mukhar.commons.*;
+import edu.princeton.cs.introcs.In;
 
 public class MotifEnumerationTest {
 

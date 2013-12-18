@@ -2,9 +2,12 @@ package com.mukhar;
 
 import static org.junit.Assert.*;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -18,10 +21,19 @@ public class MotifFinderTest {
 	}
 
 	private MotifFinder mf;
+	private static DateFormat df = DateFormat.getDateTimeInstance();
 
 	@Before
 	public void setUp() throws Exception {
 		mf = new MotifFinder();
+		System.out.println("Started: "
+				+ df.format(new Date(System.currentTimeMillis())));
+	}
+
+	@After
+	public void tearDown() {
+		System.out.println("Ended  : "
+				+ df.format(new Date(System.currentTimeMillis())));
 	}
 
 	@Test

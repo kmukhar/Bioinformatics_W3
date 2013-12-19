@@ -16,7 +16,7 @@ public class ProfilerTest {
 
 	@Before
 	public void setUp() throws Exception {
-		p = new Profiler();
+		p = new SimpleProfiler();
 	}
 
 	@After

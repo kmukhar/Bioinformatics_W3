@@ -104,7 +104,7 @@ public class MotifEnumerationTest {
 		System.out.println(actual.toString().replace(",", ""));
 	}
 
-	@Test
+//	@Test
 	public void testFindMotifs04() {
 		In in = new In("src/com/mukhar/15_4_implanted_motif_2.txt");
 

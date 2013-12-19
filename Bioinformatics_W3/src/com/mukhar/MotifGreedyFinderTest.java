@@ -110,7 +110,7 @@ public class MotifGreedyFinderTest {
     @Test
     public void testGreedyMotifSearch06() {
         readQuizData("src/com/mukhar/dataset_40_9.txt");
-        ArrayList<String> actual = mf.greedyMotifSearch(dna, k, t, new SimpleProfiler());
+        ArrayList<String> actual = mf.greedyMotifSearch(dna, k, t, new LaplaceProfiler());
         System.out.println("testGreedyMotifSearch06");
         System.out.println("Actual  : " + actual.toString().replace(",", ""));
     }

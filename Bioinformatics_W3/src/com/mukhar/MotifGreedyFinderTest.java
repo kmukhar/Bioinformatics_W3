@@ -115,6 +115,18 @@ public class MotifGreedyFinderTest {
         System.out.println("Actual  : " + actual.toString().replace(",", ""));
     }
 
+    @Test
+    public void testScore() {
+        String[] dna = new String[] { "TCGGGGGTTTTT", "CCGGTGACTTAC", "ACGGGGATTTTC",
+                "TTGGGGACTTTT", "AAGGGGACTTCC", "TTGGGGACTTCC", "TCGGGGATTCAT", "TCGGGGATTCCT",
+                "TAGGGGAACTAC", "TCGGGTATAACC" };
+        ArrayList<String> motif = new ArrayList<>();
+        for (String s : dna)
+            motif.add(s);
+        
+        assertEquals(30, mf.score(motif, new SimpleProfiler()));
+    }
+
     public void readTestData(String name) {
         In in = new In(name);
         in.readLine(); // ignore Input

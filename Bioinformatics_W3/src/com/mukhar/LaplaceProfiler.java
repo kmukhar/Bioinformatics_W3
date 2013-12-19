@@ -4,9 +4,10 @@ import java.util.ArrayList;
 
 public class LaplaceProfiler extends Profiler {
     /**
-     * Compute the profile for a set of kmers. First column in the profile is the probabilities for
-     * the nucleobase 'A', and each element (row) in the column is the probability that 'A' appears
-     * in that position. Row 1 is 'C', row 2 is 'G', and row 3 is 'T'.
+     * Compute the profile for a set of kmers. First column in the profile is
+     * the probabilities for the nucleobase 'A', and each element (row) in the
+     * column is the probability that 'A' appears in that position. Row 1 is
+     * 'C', row 2 is 'G', and row 3 is 'T'.
      * 
      * @param motif a set of kmers
      * @return A probability profile for the set of kmers
@@ -28,7 +29,7 @@ public class LaplaceProfiler extends Profiler {
                 counts[j]++;
 
             for (int j = 0; j < 4; j++)
-                profile[i][j] = ((double) counts[j]) / ((double) c.length + 4);
+                profile[i][j] = ((double) counts[j]) / ((double) c.length + 4.0);
         }
 
         return profile;

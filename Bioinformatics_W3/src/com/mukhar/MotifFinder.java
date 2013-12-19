@@ -101,7 +101,7 @@ public class MotifFinder {
         return bestMotif;
     }
 
-    private int score(ArrayList<String> motif, Profiler profiler) {
+    int score(ArrayList<String> motif, Profiler profiler) {
         char[][] c = new char[motif.size()][];
         int idx = 0;
         for (String s : motif)
